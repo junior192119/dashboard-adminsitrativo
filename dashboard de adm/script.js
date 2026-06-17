@@ -5,21 +5,31 @@ let lucros = window.document.getElementById('lucros')
 
 const valores = [
     {
-        receita: 100.820,
+        receita: 100820,
     
     },
 
     {
-        despesa: 18.200,
+        despesa: 18200,
     },
 
     {
-        lucro: 27.620
+        lucro: 82620
     }
 ]
 
 
-receitas.innerHTML = `R$ ${valores[0].receita}`
-despesas.innerHTML = `R$ ${valores[1].despesa}`
-lucros.innerHTML = `R$ ${valores[2].lucro}`
-;
+receitas.innerHTML = `${valores[0].receita.toLocaleString("pt-BR",{
+    style: 'currency',
+    currency: "BRL"
+})}`
+despesas.innerHTML = `${valores[1].despesa.toLocaleString("pt-BR",{
+    style: 'currency',
+    currency: "BRL"
+})}`
+lucros.innerHTML = `${valores[2].lucro.toLocaleString("pt-BR",{
+    style: "currency",
+    currency: "BRL"
+})
+}`
+
